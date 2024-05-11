@@ -1,0 +1,472 @@
+<!DOCTYPE html><!--
+
+
+--><html><head>
+    <title>Monopoly Go</title>
+<meta name="description" content="">
+<meta property="og:title" content="Monopoly Go Dice Rolls Generator 2023">
+<meta name="referrer" content="no-referrer">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+<!-- Analytics -->
+
+
+    <style>
+        .header_blue {
+            background: #1565c0;
+            padding: 80px 0 20px;
+            color: #fff;
+            font-size: 48px;
+            font-weight: 300;
+            margin-bottom: 40px;
+        }
+        .highlight {
+        background-color: yellow;
+        color: black;
+        
+        padding: 2px 2px;
+        
+    }
+        .header_text {
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+        }
+        body{
+            margin:0;
+            font-family:Roboto, sans-serif;
+            color:#444;
+        }
+      
+        .unlockBtn {
+            background: #2196f3;
+            border: none;
+            border-radius: 2px;
+            box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+            min-height: 31px;
+            min-width: 70px;
+            padding: 2px 16px;
+            text-align: center;
+            text-shadow: none;
+            text-transform: uppercase;
+            -webkit-transition: all 280ms ease;
+            transition: all 280ms ease;
+            box-sizing: border-box;
+            cursor: pointer;
+            -webkit-appearance: none;
+            display: inline-block;
+            vertical-align: middle;
+            font: 500 14px/31px Roboto,sans-serif!important;
+            outline: 0!important;
+            color:white;
+        }
+        .content-container{
+            width:80%;margin:0 auto;
+        }
+        
+        <style>
+        .header_blue {
+            background: #1565c0;
+            padding: 80px 0 20px;
+            color: #fff;
+            font-size: 48px;
+            font-weight: 300;
+            margin-bottom: 40px;
+        }
+        .header_text {
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+        }
+        body{
+            margin:0;
+            font-family:Roboto, sans-serif;
+            color:#444;
+        }
+        .unlockBtn:hover{
+            box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+        }
+        .unlockBtn {
+            background: #2196f3;
+            border: none;
+            border-radius: 2px;
+            box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+            min-height: 31px;
+            min-width: 70px;
+            padding: 2px 16px;
+            text-align: center;
+            text-shadow: none;
+            text-transform: uppercase;
+            -webkit-transition: all 280ms ease;
+            transition: all 280ms ease;
+            box-sizing: border-box;
+            cursor: pointer;
+            -webkit-appearance: none;
+            display: inline-block;
+            vertical-align: middle;
+            font: 500 14px/31px Roboto,sans-serif!important;
+            outline: 0!important;
+            color:white;
+        }
+        .content-container{
+            width:80%;margin:0 auto;
+        }
+        
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(https://scopely-website.s3.eu-west-2.amazonaws.com/_resized/ZwMTWoqRcetSpgZGKRnl6hCDw1j8DQfnENCSZWa9-w700-q75.png);
+    background-size: cover;
+
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    padding: 35px;
+    
+    color: #fff;
+    font-family: Montserrat;
+}
+
+.margins {
+    width: 65%;
+    margin: auto;
+}
+
+.logo {
+    width: 60%;
+    margin: auto;  
+}
+
+.column {
+    width: calc(25% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 15px;
+    border: 2px solid #fff;
+    padding: 5px;
+    min-height: 200px;
+    margin-top: 6vh;
+    float: left;
+    transition: all .2s ease-in-out;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.column:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.column h1 {
+    font-size: 17px;
+    text-align: center;
+}
+
+.column p {
+    font-weight: 700;
+    text-decoration: line-through;
+}
+
+.img {
+    
+    
+}
+
+.strikethroughPrice {
+    display: inline-block;
+    text-decoration: line-through;
+}
+
+.price {
+    display: inline-block;
+    color: #FDA31A;
+}
+
+.textParent {
+    font-size: 23px;
+    font-weight: 700;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.title {
+font-family: 'Fira Code', monospace;
+text-color: #5582ff;
+    font-weight: 800;
+    padding :15px;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    font-size: 20px;
+    
+    -webkit-text-stroke: 0.35px #b7b7b7; /* لمتصفحات WebKit مثل Chrome و Safari */
+    text-stroke: 0.35px #b7b7b7;
+    font-weight: bold;
+}
+
+hr {
+    border-top: 1px solid darkgrey;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+.row {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    padding-top: 10vh;
+}
+
+.field {
+    width: calc(100% - 10px);
+    position: relative;
+}
+
+.field:first-child {
+    margin-right: 30px;
+}
+
+.field:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 0px;
+    height: 0px;
+}
+
+.field:first-child:after {
+    right: -15px;
+    border-top: 60px solid rgba(0,0,0,0.7);
+    border-right: 15px solid transparent;
+}
+
+.field:last-child:after {
+    left: -15px;
+    border-bottom: 60px solid #ffffff;
+    border-left: 15px solid transparent;
+}
+
+.field.field--button:after {
+    border-bottom: 60px solid #FDA31A;
+}
+
+input[type=text] {
+    border: none;
+    line-height: 60px;
+    outline: none;
+    padding: 0 15px;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.7);
+    font-size: 20px;
+    color: #fff;
+}
+
+.button {
+    background-color: #FDA31A;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    line-height: 60px;
+    font-size: 30px;
+    width: 100%;
+    padding: 0 30px 0 20px;
+}
+  .paragraph-spacing {
+    margin-bottom: 20px;
+    }
+button.showContentLocker {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    color: #fff;
+    outline: none;
+    width: 100%;
+    padding: 15px 20px;
+    font-family: Montserrat;
+    font-weight: 600;
+    border-radius: 15px;
+    border: 2px solid #fff;
+    font-size: 25px;
+    text-transform: uppercase;
+    transition: all .2s ease-in-out;
+    letter-spacing: 0.02em;
+}
+
+button.showContentLocker:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.button-container {
+    width: 25%;
+    margin: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        overflow-x: hidden;
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+
+    .margins {
+        width: 99%;
+    }
+
+    .column {
+        width: calc(50% - 5px);
+        margin-left: 2.5px;
+        margin-right: 2.5px;
+        margin-top: 3vh;
+    }
+
+    .row {
+        width: 100%;
+    }
+
+    .field {
+        width: calc(55% - 10px);
+    }
+
+    .field:first-child:after {
+        right: 0;
+        border-top: 0px solid rgba(0,0,0,0.7);
+        border-right: 0px solid transparent;
+    }
+    
+    .field:last-child:after {
+        left: 0px;
+        border-bottom: 0px solid #ffffff;
+        border-left: 0px solid transparent;
+    }
+    
+    .field.field--button:after {
+        border-bottom: 0px solid #FDA31A;
+    }
+
+    .button-container {
+        width: 98%;
+    }
+}
+.nss{
+    margin: 20px;
+}
+.jadwal{
+    
+    margin: 10px;
+}
+   .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color:  ; /* تحديد اللون والشفافية */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999; /* ضعه فوق جميع العناصر الأخرى */
+            opacity: 1; /* تعيين الشفافية الافتراضية إلى 1 */
+            transition: opacity 1s ease; /* تطبيق التأثير التراجعي على الشفافية */
+        }
+
+    .loading-overlay.hidden {
+            opacity: 0; /* تجعل النافذة غير مرئية عندما تكون مخفية */
+            pointer-events: none; /* تجنب التفاعل مع النافذة المخفية */
+        }
+.fo9 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   } 
+   
+
+    </style>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <div class="loading-overlay">
+        <div class="fo9">
+    <img class="gg" src="https://img1.picmix.com/output/stamp/normal/9/4/7/0/2390749_19448.gif" alt="Loading Animation">
+    </div>
+</div>
+
+
+<div class="margins" id="stepOne" style="display: block;">
+<div class="logo">
+<img src="https://up6.cc/2024/04/1711985251171.png" width="100%" height="100%">
+</div>
+<hr>
+<div class="title" ><center><span>Get Free Event Token & More Rewards</span></div>
+<div class="jadwal"> 
+<hr>
+
+<div class="column" onclick="window.location.href='https://cutt.ly/Pw7Rq0Kq';" style="cursor: pointer;"> 
+
+<div class="img">
+<img src="https://up6.cc/2024/04/171338034390881.png" width="100%" height="100%">
+</div>
+<h1>CLAIM </h1>
+<div class="textParent">
+<div class="strikethroughPrice"></div>
+<div class="price">Free</div>
+</div>
+</div>
+<div class="column" onclick="window.location.href='https://cutt.ly/lw7RwCpr';" style="cursor: pointer;"> 
+
+<div class="img">
+<img src="images/wildsti-1-removebg-preview.png" width="100%" height="100%">
+</div>
+<h1> WILD CARD</h1>
+<div class="textParent">
+<div class="strikethroughPrice"></div>
+<div class="price">Free</div>
+</div>
+</div>
+<div class="column" onclick="window.location.href='https://cutt.ly/Tw7ReiKS';" style="cursor: pointer;"> 
+
+<div class="img">
+<img src="images/white-rolling-dice-3d-rendering-isometric-icon-png.png" width="100%" height="100%">
+</div>
+<h1>+15000 Dice rolls</h1>
+<div class="textParent">
+<div class="strikethroughPrice"></div>
+<div class="price">Free</div>
+</div>
+</div>
+
+<div class="column" onclick="window.location.href='https://cutt.ly/Tw7ReiKS';" style="cursor: pointer;"> 
+
+<div class="img">
+<img src="images/axa9or-1-removebg-preview-1.png" width="100%" height="100%">
+</div>
+<h1>+5000 Dice rolls</h1>
+<div class="textParent">
+<div class="strikethroughPrice"></div>
+<div class="price">Free</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<script>
+    // تأخير ظهور المحتوى بعد 3 ثواني
+    setTimeout(function() {
+        document.querySelector(".loading-overlay").classList.add("hidden");
+        document.body.style.overflow = "visible"; // إظهار التمرير
+    }, 2000);
+</script>
+
+
+
+
+
+</body></html>
